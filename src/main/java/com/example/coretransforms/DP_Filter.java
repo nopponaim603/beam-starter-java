@@ -1,4 +1,4 @@
-package com.example;
+package com.example.coretransforms;
 
 import org.apache.beam.sdk.Pipeline;
 import org.apache.beam.sdk.options.PipelineOptions;

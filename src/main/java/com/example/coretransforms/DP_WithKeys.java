@@ -1,4 +1,4 @@
-package com.example;
+package com.example.coretransforms;
 
 
 import static org.apache.beam.sdk.values.TypeDescriptors.strings;

@@ -36,6 +36,8 @@ public class DP_TupleTag {
 
         outputTuple.get(numBelow100Tag).apply("Log Number <= 100: ", ParDo.of(new LogOutput<Integer>("Number <= 100: ")));
 
+
+
         outputTuple.get(numAbove100Tag).apply("Log Number > 100: ", ParDo.of(new LogOutput<Integer>("Number > 100: ")));
 
 
