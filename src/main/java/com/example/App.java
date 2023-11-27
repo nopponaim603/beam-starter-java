@@ -47,11 +47,15 @@ public class App {
 		FlinkPipelineOptions options = PipelineOptionsFactory.as(FlinkPipelineOptions.class);
 		options.setRunner(org.apache.beam.runners.flink.FlinkRunner.class);
 
+		// Set Flink master (replace with your Flink master address)
+		//options.setFlinkMaster("local");
+
 		//var options = PipelineOptionsFactory.fromArgs(args).withValidation().as(Options.class);
 
-		var pipeline = Pipeline.create(options);
+		// Create a Beam pipeline using FlinkPipelineOptions
+		Pipeline pipeline = Pipeline.create(options);
 
-		//App.buildPipeline(pipeline,);
+		App.buildPipeline(pipeline,"Hello world");
 		pipeline.run().waitUntilFinish();
 	}
 }
