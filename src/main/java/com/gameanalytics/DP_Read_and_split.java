@@ -30,10 +30,12 @@ public class DP_Read_and_split {
         pipeline.run().waitUntilFinish();
     }
 
+    /*
+
     static  PCollection<String, Void> processElementIO(PCollection<String, Void> input) {
         return processElementIO(null);
     }
-
+*/
 
 
     // The applyTransform() multiplies the number by 10 and outputs
