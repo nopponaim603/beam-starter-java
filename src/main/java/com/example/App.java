@@ -11,6 +11,7 @@ package com.example;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.beam.runners.flink.FlinkPipelineOptions;
 import org.apache.beam.sdk.Pipeline;
 import org.apache.beam.sdk.coders.StringUtf8Coder;
 import org.apache.beam.sdk.options.Default;
@@ -42,6 +43,9 @@ public class App {
 	}
 
 	public static void main(String[] args) {
+		//FlinkPipelineOptions options = PipelineOptionsFactory.as(FlinkPipelineOptions.class);
+		//options.setRunner(org.apache.beam.runners.flink.FlinkRunner.class);
+
 		var options = PipelineOptionsFactory.fromArgs(args).withValidation().as(Options.class);
 		var pipeline = Pipeline.create(options);
 		App.buildPipeline(pipeline, options.getInputText());
